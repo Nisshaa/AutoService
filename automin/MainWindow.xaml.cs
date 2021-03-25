@@ -64,7 +64,13 @@ namespace automin
             set
             {
                 _ServiceList = value;
+                if (PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("ServiceList"));
+                }
+
             }
+
         }
         private Boolean _IsAdminMode = false;
 
